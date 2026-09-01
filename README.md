@@ -1,8 +1,8 @@
 # DRG/DIP 工具包（MedGroup）
 
-MedGroup 面向 DRG/DIP 医保支付与编码复核场景提供远程 MCP 工具。用户在 WorkBuddy 中搜索并连接后，通过 MedGroup 账号完成 OAuth 授权，无需复制 API Key，即可在对话中查询城市与规则、检索 ICD 编码、执行 DRG/DIP 分组、进行结算情景测算并查询 CC/MCC 状态。
+MedGroup 面向 DRG/DIP 医保支付与编码复核场景提供远程 MCP 工具。用户安装 OAuth 版技能或导入自定义连接器配置后，通过本人 MedGroup 账号完成授权，无需复制 API Key，即可在对话中查询城市与规则、检索 ICD 编码、执行 DRG/DIP 分组、进行结算情景测算并查询 CC/MCC 状态。
 
-## WorkBuddy 公开连接器信息
+## WorkBuddy 接入信息
 
 - 展示名称：`DRG/DIP 工具包（MedGroup）`
 - 内部标识：`medgroup-drgdip-toolkit`
@@ -22,10 +22,12 @@ MedGroup 面向 DRG/DIP 医保支付与编码复核场景提供远程 MCP 工具
 
 ## 使用流程
 
-1. 在 WorkBuddy 连接器中搜索 `DRG/DIP 工具包（MedGroup）`。
-2. 点击连接，登录 MedGroup 并确认授权。
+1. 在 ClawHub/SkillHub 安装或更新 `@u201013903/medgroup-drgdip-skill`，确认版本不低于 `1.1.0`。如客户端暂不会自动加载技能内的 MCP 配置，导入本仓库的 `mcp.json`。
+2. 发起第一次真实工具调用，按客户端提示登录 MedGroup 并确认授权。
 3. 在工作任务中询问：`你是否可以看到 MedGroup 相关工具？请逐一列出工具名称和用途。`
 4. 再要求调用 `get_city_list`，核对真实工具轨迹和 MedGroup 业务响应。
+
+WorkBuddy 官方连接器市场仍在申请中；本仓库和 ClawHub 技能发布不代表已通过 WorkBuddy 官方审核或已在其连接器市场公开可搜。
 
 仅查看工具列表不扣减 MedGroup 额度；每次真实工具调用按 MedGroup 当前会员与额度规则校验。
 
@@ -44,4 +46,3 @@ MedGroup provides a remote MCP toolkit for DRG/DIP payment, coding review, group
 - `SKILL.md`：关联技能的任务识别、参数追问和错误处理规则。
 - `skill-card.md`：公开技能平台说明。
 - `icon.png`：400×400 透明背景 PNG 图标。
-

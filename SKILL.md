@@ -1,6 +1,6 @@
 ---
 name: medgroup-drgdip-skill
-description: 通过已授权的 MedGroup 远程工具查询 DRG/DIP 城市与规则、检索 ICD 编码、执行分组和结算测算、查询 CC/MCC。用户提出医保分组、编码或规则核对任务时使用；不替代临床诊断、医保审核或实际结算。
+description: 安装后通过 MedGroup OAuth 登录授权，查询 DRG/DIP 城市与规则、检索 ICD 编码、执行分组和结算测算、查询 CC/MCC。用户提出医保分组、编码或规则核对任务时使用；不需要 API Key，不替代临床诊断、医保审核或实际结算。
 license: MIT-0
 metadata: {"openclaw":{"emoji":"🩺","homepage":"https://medgroup.medchat.fun","skillKey":"medgroup-drgdip-skill"}}
 ---
